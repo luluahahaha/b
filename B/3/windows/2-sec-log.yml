@@ -1,0 +1,9 @@
+---
+- name: Playbook 2-sec-log
+  gather_facts: false
+  hosts: windows
+  tasks:
+    - name: Stooped Term Service
+      win_service:
+        name: TermService
+        state: stopped
