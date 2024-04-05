@@ -1,0 +1,13 @@
+---
+- name: Configure Hostname
+  hosts: linux
+  tasks:
+    - name: Set Hostname
+      hostname:
+        name: "{{ hostname }}"
+      notify: "Restart System" 
+  handlers:
+    - name: Restart System
+      ansible.builtin.reboot:
+
+

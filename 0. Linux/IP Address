@@ -1,0 +1,17 @@
+# Persiapan
+Debian : nano ~/.bashrc
+export PATH=$PATH:/sbin
+apt install tree net-tools tmux
+# Lan Setup
+VM dalam keadaan mati
+Klik kanan → Settings → Add → Network Adapter → Lan Segmen → Add
+
+# General Configuration
+IP Address
+nano /etc/network/interfaces
+nano /etc/resolv.conf
+ubah nameserver sesuai dengan soal
+
+# Hostname 
+nano /etc/hostname
+nano /etc/issue
