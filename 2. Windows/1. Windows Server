@@ -1,5 +1,0 @@
-# Buka Powershell di WINDOWS
-winrm enumerate winrm/config/Listener
-winrm get winrm/config/Service
-winrm set winrm/config/Service '@{AllowUnencrypted = "true"}'
-winrm set winrm/config/Service/Auth '@{Basic = "true"}'
