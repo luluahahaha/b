@@ -1,1 +1,1 @@
-# presentasi
+# DONT COPYRIGHT
