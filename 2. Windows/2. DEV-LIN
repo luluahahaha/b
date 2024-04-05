@@ -1,0 +1,4 @@
+Terminal Remote Access BASTION
+cd /data/ansible/windows
+ansible-vault encrypt_string Administrator >> /etc/ansible/hosts
+ansible-vault encrypt_string P@ssw0rd >> /etc/ansible/hosts

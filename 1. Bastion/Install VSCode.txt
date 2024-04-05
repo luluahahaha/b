@@ -1,0 +1,9 @@
+DEV-LIN
+VM Terkoneksi Internet/ gunakan CD Visual Code
+Buka Terminal : adduser user, P@ssw0rd
+
+Offline
+dpkg -i visualcode.deb
+rm visualcode.deb
+
+

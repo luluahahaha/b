@@ -1,0 +1,15 @@
+Bastion
+apt install openssh-server
+PermitRootLogin yes
+
+Dev-Lin
+Buka Terminal
+ssh-keygen
+ssh-copy-id root@10.22.0.50\
+
+VS Code
+>< Open a Remote Windows -> SSH (Install)
+Add SSH Host : ssh root@10.22.0.50
+Home User SSH config
+Klik Connect di Pojok kanan bawah
+Klik ->
