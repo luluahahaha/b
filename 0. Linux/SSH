@@ -1,8 +1,0 @@
-apt install openssh-server
-PermitRootLogin yes
-
-Remote BASTION di DEV-LIN
-ssh root@10.22.0.1
-ssh root@10.22.0.2
-ssh root@10.22.0.3
-ssh root@10.22.0.4
