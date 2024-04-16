@@ -1,0 +1,13 @@
+# ping ansible
+ansible -m ping xxx (LIN1, linux, web, dll)
+ansible -m win_ping windows
+
+# memulai playbook
+ansible-playbook file.yml 
+
+# IP DNS DEV-LIN & WIN
+10.22.0.3
+10.22.0.101
+
+#WIN
+netstat -a

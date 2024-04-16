@@ -1,0 +1,23 @@
+# LINUX
+apt install openssh-server
+nano /etc/ssh/sshd_config
+  PermitRootLogin yes
+
+# Dev-Lin
+Buka Terminal $
+ssh-keygen
+ssh-copy-id root@10.22.0.50
+
+# VS Code
+>< Open a Remote Windows → SSH (Install)
+Add SSH Host : ssh root@10.22.0.50
+
+#Buka Terminal DEV-LIN
+/home/user/.ssh/config
+  IdentityFile /home/user/.ssh/id_rsa
+
+#Remote
+ssh root@10.22.0.1
+ssh root@10.22.0.2
+ssh root@10.22.0.3
+ssh root@10.22.0.4

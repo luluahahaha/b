@@ -1,0 +1,5 @@
+#Offline
+transfer CD visualcode.deb ke #Bastion
+  scp visualcode.deb user@10.22.0.50:/home/competitor
+dpkg -i visualcode.deb
+rm visualcode.deb

@@ -1,0 +1,25 @@
+---
+- name: Create users
+  hosts: linux
+  tasks:
+
+    - name: Read Users
+      community.general.read_csv:
+        path: /etc/ansible/users.csv
+        delimiter: ';'
+      register: users
+      delegate_to: localhost
+
+    - name: display users
+      ansible.builtin.debug:
+        msg: "{{ item }}"
+      loop: "{{ users.list }}"
+
+    - name: Add user
+      ansible.builtin.user:
+        name: "{{ item.username }}"
+        home: "{{ item.home }}"
+        password: "{{ item.password | password_hash('sha512') }}"
+        uid: "{{ item.uid }}"
+        shell: '/bin/bash'
+      loop: "{{ users.list }}"

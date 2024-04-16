@@ -1,0 +1,19 @@
+Linux
+cd /etc/ansible
+echo -n "P@ssw0rd" > .vault_pass
+touch ansible.cfg
+[defaults]
+inventory = /etc/ansible/hosts
+vault_password_file = /etc/ansible/.vault_pass
+ansible-vault encrypt_string root --vault-password-file /etc/ansible/.vault_pass
+
+#
+# Buka Powershell di WINDOWS
+winrm enumerate winrm/config/Listener
+winrm get winrm/config/Service
+winrm set winrm/config/Service '@{AllowUnencrypted = "true"}'
+winrm set winrm/config/Service/Auth '@{Basic = "true"}'
+
+cd /data/ansible/windows
+ansible-vault encrypt_string Administrator >> /etc/ansible/hosts
+ansible-vault encrypt_string P@ssw0rd >> /etc/ansible/hosts

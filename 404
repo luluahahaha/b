@@ -1,0 +1,11 @@
+Problem:
+LIN1 | FAILED! => {
+    "msg": "to use the 'ssh' connection type with passwords or pkcs11_provider, you must install the sshpass program"
+}
+    Solve: sudo apt install sshpass
+
+Problem: [DEPRECATION WARNING]: Encryption using the Python crypt module is deprecated. The Python crypt module is deprecated and will be removed 
+from Python 3.13. Install the passlib library for continued encryption functionality. This feature will be removed in version 2.17. 
+Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+fatal: [LIN1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'dict object' has no attribute 'uid'. 'dict object' has no attribute 'uid'\n\nThe error appears to be in '/data/ansible/linux/6-users.yml': line 18, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Add user\n      ^ here\n"}
+    Solve: sed -i 's/\xef\xbb\xbfuid/uid/g' /etc/ansible/users.csv
