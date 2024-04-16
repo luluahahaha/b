@@ -1,9 +1,0 @@
-# Melakukan Sysprep
-# Mengubah IP
-Klik kanan footer → Open Network & Internet Settings → Change Network Adapther
-
-# Windows Pingable
-WIN → Windows Administratif Tools → Windows Defender Firewall → Inbound Rules → Custom → IPv4 → ICMPv4
-
-# Hostname 
-Win S : Server Manager → Local Server → Computer Name → Change
