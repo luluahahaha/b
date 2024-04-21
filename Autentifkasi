@@ -1,13 +1,20 @@
 Linux
+apt install ansible
 cd /etc/ansible
 echo -n "P@ssw0rd" > .vault_pass
-
 touch ansible.cfg
 [defaults]
 inventory = /etc/ansible/hosts
 vault_password_file = /etc/ansible/.vault_pass
 
-#
+{+} hosts linux
+ansible_user
+ansible_ssh_password
+
+{+} hosts windows
+ansible_user
+ansible_password
+
 # Buka Powershell di WINDOWS
 winrm enumerate winrm/config/Listener
 winrm get winrm/config/Service
