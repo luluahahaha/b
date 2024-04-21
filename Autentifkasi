@@ -1,11 +1,11 @@
 Linux
 cd /etc/ansible
 echo -n "P@ssw0rd" > .vault_pass
+
 touch ansible.cfg
 [defaults]
 inventory = /etc/ansible/hosts
 vault_password_file = /etc/ansible/.vault_pass
-ansible-vault encrypt_string root --vault-password-file /etc/ansible/.vault_pass
 
 #
 # Buka Powershell di WINDOWS
